@@ -7,7 +7,9 @@
 #
 # 💡 You can test this code using the **Kappa4310Rasp Evaluation Board**.
 # 🛒 Buy it at: **www.inacks.com/kappa4310rasp**
-
+#
+# 📄 Download the **IS4310 datasheet** at:
+# 🔗 https://www.inacks.com/is4310
 
 
 from smbus2 import SMBus, i2c_msg
