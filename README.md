@@ -1,5 +1,4 @@
 # IS4310 Modbus Code Example for Raspberry Pi
----
 
 This Python script communicates with the IS4310 Modbus RTU chip via I²C using a Raspberry Pi.
 
