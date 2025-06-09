@@ -13,5 +13,5 @@ A value of 0 turns off the LEDs, and a value of 100 sets them to maximum brightn
 💡 Test this example using the **Kappa4310Rasp Evaluation Board**:  
 👉 [https://www.inacks.com/kappa4310rasp](https://www.inacks.com/kappa4310rasp)
 
-📄 Download the IS4310 datasheet:  
+📄 Download the **IS4310 datasheet**:  
 👉 [https://www.inacks.com/is4310](https://www.inacks.com/is4310)
