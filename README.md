@@ -14,3 +14,5 @@ A value of 0 turns off the LEDs, and a value of 100 sets them to maximum brightn
 
 📄 Download the **IS4310 datasheet**:  
 👉 [https://www.inacks.com/is4310](https://www.inacks.com/is4310)
+
+For more information visit [www.inacks.com](https://www.inacks.com/is4310)
