@@ -1,15 +1,15 @@
 # IS4310 Modbus Code Example for Raspberry Pi
 # ----------------------------------------------------------
-# This Python script communicates with the IS4310 Modbus RTU chip via I²C using a Raspberry Pi.
+# This Python script communicates with the IS4310 Modbus RTU chip via I2C using a Raspberry Pi.
 # It demonstrates how to read a push button (simulating a sensor) and store its value in Holding Register 0.
 # It also controls an RGB LED (simulating an actuator) using PWM pins 12, 13, and 19, based on the values in Holding Registers 1, 2, and 3.
 # A value of 0 turns off the LEDs, and a value of 100 sets them to maximum brightness.
 #
-# 💡 You can test this code using the **Kappa4310Rasp Evaluation Board**.
-# 🛒 Buy it at: **www.inacks.com/kappa4310rasp**
+# You can test this code using the **Kappa4310Rasp Evaluation Board**.
+# Buy it at: **www.inacks.com/kappa4310rasp**
 #
-# 📄 Download the **IS4310 datasheet** at:
-# 🔗 https://www.inacks.com/is4310
+# Download the **IS4310 datasheet** at:
+# https://www.inacks.com/is4310
 
 
 from smbus2 import SMBus, i2c_msg
@@ -131,3 +131,4 @@ finally:
     pwm2.stop()
     pwm3.stop()
     GPIO.cleanup()
+
