@@ -1,16 +1,33 @@
-# IS4310 Modbus Code Example for Raspberry Pi
-# ----------------------------------------------------------
-# This Python script communicates with the IS4310 Modbus RTU chip via I2C using a Raspberry Pi.
-# It demonstrates how to read a push button (simulating a sensor) and store its value in Holding Register 0.
-# It also controls an RGB LED (simulating an actuator) using PWM pins 12, 13, and 19, based on the values in Holding Registers 1, 2, and 3.
-# A value of 0 turns off the LEDs, and a value of 100 sets them to maximum brightness.
-#
-# You can test this code using the **Kappa4310Rasp Evaluation Board**.
-# Buy it at: **www.inacks.com/kappa4310rasp**
-#
-# Download the **IS4310 datasheet** at:
-# https://www.inacks.com/is4310
+"""
+IS4310 Modbus RTU Slave Code Example for Raspberry Pi in Python
+----------------------------------------------------------------
+Coding with Raspberry Pi for the IS4310 is very simple. It does not require 
+any INACKS-specific library, just the standard Python smbus2 library for I2C:
+i2c_msg.write(), i2c_msg.read() and related.
 
+This Raspberry Pi project uses the IS4310 I2C Modbus RTU Slave chip. 
+The example demonstrates how to use the Pi to communicate with the IS4310 
+over I2C. In this example, the Raspberry Pi reads a push button (simulating
+a sensor) and store its value in Holding Register 0. It also controls an 
+RGB LED (simulating an actuator) using PWM pins 12, 13, and 19, based on 
+the values in Holding Registers 1, 2, and 3. A value of 0 turns off the LEDs, 
+and a value of 100 sets them to maximum brightness.
+
+To test the example, you will need a Modbus Master. You can use the qModMaster 
+software, which is a Modbus TCP/RTU Master program for PC. Configure it with 
+these values: Slave Address 1, 19200 baud, Even parity, and 1 Stop bit.
+
+Execute this example with sudo to get access to the I2C interface:
+sudo python ISXMPL4310ex5.py
+
+More info at:
+- Kappa4310Rasp Evaluation Board: https://www.inacks.com/kappa4310rasp
+- IS4310 Datasheet: https://www.inacks.com/is4310
+- qModMaster: https://sourceforge.net/projects/qmodmaster/
+- Inacks website: https://www.inacks.com
+
+You can download this Python project at: https://github.com/inacks/ISXMPL4310ex5
+"""
 
 from smbus2 import SMBus, i2c_msg
 import RPi.GPIO as GPIO
@@ -131,4 +148,5 @@ finally:
     pwm2.stop()
     pwm3.stop()
     GPIO.cleanup()
+
 
