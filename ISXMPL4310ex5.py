@@ -128,7 +128,7 @@ try:
         duty3 = abs(pwm_val3 - 100)
 
         # Print duty cycle values for debugging (tab-separated)
-        print(f"{duty1}\t{duty2}\t{duty3}")
+        print(duty1, duty2, duty3)
 
         # Update PWM duty cycles to control LED brightness
         pwm1.ChangeDutyCycle(duty1)
@@ -148,5 +148,6 @@ finally:
     pwm2.stop()
     pwm3.stop()
     GPIO.cleanup()
+
 
 
